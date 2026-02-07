@@ -1,16 +1,126 @@
-# React + Vite
+# POLISH VERSION - PL
+# Todo List z Supabase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projekt własny, który stworzyłem i zaprojektowałem od podstaw.
+Celem było stworzenie prostej aplikacji do zarządzania zadaniami (todo list) z wykorzystaniem **React** i **Supabase** do przechowywania zadań.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live demo: [Vercel](to-do-app-with-db-git-main-ogonekmateuszs-projects.vercel.app)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologie
 
-## Expanding the ESLint configuration
+- **React** – tworzenie komponentów UI
+- **TailwindCSS** – szybkie stylowanie
+- **Supabase** – baza danych i API do przechowywania zadań
+- **Responsive Design** – mobile-first, dostosowanie do różnych rozdzielczości
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Funkcjonalności
+-- Dodawanie nowych zadań
+-- Usuwanie zadań
+-- Przechowywanie zadań w chmurze dzięki Supabase
+-- Responsywny interfejs użytkownika
+
+---
+
+## Instalacja
+
+1. Sklonuj repozytorium:
+
+```bash
+git clone https://github.com/ogonekmateusz/to-do-app-with-db.git
+```
+
+2. Przejdź do katalogu projektu:
+
+```bash
+cd to-do-app-with-db
+```
+
+3. Zainstaluj zależności:
+
+```bash
+npm install
+```
+
+4. Skonfiguruj połączenie z Supabase:
+-- Utwórz projekt w Supabase, tabela tasks z polem taskName
+-- Skopiuj URL i klucz anonima (anon key) do pliku .env zgodnie z dokumentacją
+
+5. Uruchom lokalny serwer:
+
+```bash
+npm run dev
+```
+
+Otwórz [http://localhost:5173](http://localhost:5173) w przeglądarce.
+
+------------------------------------------------------------------------------------------------------------
+
+# ENGLISH VERSION - EN
+# Todo List with Supabase
+
+A personal project that I designed and developed from scratch.
+The goal was to create a simple task management app (todo list) using **React** and **Supabase** for storing tasks.
+
+---
+
+Live demo: [Vercel](to-do-app-with-db-git-main-ogonekmateuszs-projects.vercel.app)
+
+---
+
+## Technologies
+
+- **React** – UI components
+- **TailwindCSS** – Fast styling
+- **Supabase** – database and API for storing tasks
+- **Responsive Design** – mobile-first, adaptable to different screen sizes
+
+---
+
+## Features
+-- Adding new tasks
+-- Deleting tasks
+-- Cloud data storage powered by Supabase
+-- Responsive user interface
+
+---
+
+## Installation
+
+1. Clone the repository: 
+
+```bash
+git clone https://github.com/ogonekmateusz/to-do-app-with-db.git
+```
+
+2. Navigate to the project folder:
+
+```bash
+cd to-do-app-with-db
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Configure Supabase connection:
+-- Create a project in Supabase, create a table tasks with a field taskName
+-- Copy the URL and anon key into a .env file according to the documentation
+
+5. Start the local server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+
+AUTOR: [Mateusz Ogonek](https://github.com/ogonekmateusz)
