@@ -19,12 +19,17 @@ export default function App() {
     setTasks(updatedTasks);
   };
 
+  const AddTask = async (taskName) => {
+    await addTask(taskName);
+    const updatedTasks = await fetchTasks();
+    setTasks(updatedTasks);
+  };
 
   return (
     <div className="to-do-app-container bg-linear-to-tr from-blue-200 via-blue-400 to-blue-600 w-full h-screen flex justify-center items-center">
       <div className="to-do-app-main flex flex-col bg-linear-to-tr from-white/60 to-white/90 w-[80%] md:w-[90%] lg:w-[40%] h-[80%] sm:h-[70%] md:h-[60%] lg:h-[50%] p-[2em] rounded-xl shadow-lg">
         <Header />
-        <TaskForm />
+        <TaskForm addTask={AddTask} />
         <TaskList DeleteTask={DeleteTask} taskList={tasks} />
       </div>
     </div>

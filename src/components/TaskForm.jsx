@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function TaskForm() {
+export default function TaskForm({ addTask }) {
+  const [taskName, setTaskName] = useState("");
+
+  const onTaskChange = (e) => {
+    setTaskName(e.target.value);
+    console.log(taskName);
+  };
+
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    addTask(taskName);
+  };
+
   return (
-    <form className="to-do-app-task-form my-4 flex w-full justify-between space-x-3">
+    <form
+      onSubmit={onFormSubmit}
+      className="to-do-app-task-form my-4 flex w-full justify-between space-x-3"
+    >
       <input
         type="text"
         placeholder="Add a new task…"
+        onChange={onTaskChange}
         className="p-3 border border-blue-400 rounded-lg outline-none shadow-sm w-full  "
       />
       <button

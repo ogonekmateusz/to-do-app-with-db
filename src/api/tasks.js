@@ -23,11 +23,12 @@ export const deleteTask = async (taskId) => {
 };
 
 export const addTask = async (taskName) => {
-  const { data, error } = await supabase.from("tasks").insert([{ taskName }]);
+  const { data, error } = await supabase.from("tasks").insert([{ taskName }]); // id jest generowane automatycznie
 
   if (error) {
     console.error("Error adding task:", error);
-    return null;
+    return null; // zwracamy null zamiast data[0]
   }
-  return data[0]; // zwracamy nowo dodany rekord
+
+  return data ? data[0] : null; // bezpieczne odczytanie
 };
