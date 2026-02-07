@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Task from "./Task";
-import { fetchTasks } from "../api/tasks";
+import { fetchTasks, deleteTask } from "../api/tasks";
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -10,10 +10,20 @@ export default function TaskList() {
     console.log(tasks);
   }, []);
 
+  const onDeleteTask = async (taskId) => {
+    await deleteTask(taskId); 
+    const updatedTasks = await fetchTasks(); 
+    setTasks(updatedTasks);
+  };
+
   return (
     <div className="to-do-app-task-list flex flex-col space-y-4 overflow-y-auto flex-1">
       {tasks.map((task) => (
-        <Task key={task.id} taskName={task.taskName} />
+        <Task
+          key={task.id}
+          taskName={task.taskName}
+          onDeleteTask={() => onDeleteTask(task.id)}
+        />
       ))}
     </div>
   );
