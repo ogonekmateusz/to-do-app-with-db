@@ -10,7 +10,7 @@ export default function TaskList() {
     console.log(tasks);
   }, []);
 
-  const onDeleteTask = async (taskId) => {
+  const DeleteTask = async (taskId) => {
     await deleteTask(taskId); 
     const updatedTasks = await fetchTasks(); 
     setTasks(updatedTasks);
@@ -22,7 +22,7 @@ export default function TaskList() {
         <Task
           key={task.id}
           taskName={task.taskName}
-          onDeleteTask={() => onDeleteTask(task.id)}
+          onDeleteTask={() => DeleteTask(task.id)}
         />
       ))}
     </div>

@@ -21,3 +21,13 @@ export const deleteTask = async (taskId) => {
   }
   return data;
 };
+
+export const addTask = async (taskName) => {
+  const { data, error } = await supabase.from("tasks").insert([{ taskName }]);
+
+  if (error) {
+    console.error("Error adding task:", error);
+    return null;
+  }
+  return data[0]; // zwracamy nowo dodany rekord
+};
