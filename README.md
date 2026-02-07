@@ -6,7 +6,7 @@ Celem było stworzenie prostej aplikacji do zarządzania zadaniami (todo list) z
 
 ---
 
-Live demo: [Vercel](to-do-app-with-db-git-main-ogonekmateuszs-projects.vercel.app)
+Live demo: [Vercel](https://to-do-app-with-db.vercel.app/)
 
 ---
 
@@ -69,7 +69,7 @@ The goal was to create a simple task management app (todo list) using **React** 
 
 ---
 
-Live demo: [Vercel](to-do-app-with-db-git-main-ogonekmateuszs-projects.vercel.app)
+Live demo: [Vercel](https://to-do-app-with-db.vercel.app/)
 
 ---
 
