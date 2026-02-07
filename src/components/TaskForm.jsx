@@ -10,7 +10,13 @@ export default function TaskForm({ addTask }) {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
+    if (taskName == "") {
+      alert("Enter the task name!");
+      return;
+    }
+
     addTask(taskName);
+    setTaskName("")
   };
 
   return (
@@ -22,6 +28,7 @@ export default function TaskForm({ addTask }) {
         type="text"
         placeholder="Add a new task…"
         onChange={onTaskChange}
+        value={taskName}
         className="p-3 border border-blue-400 rounded-lg outline-none shadow-sm w-full  "
       />
       <button
